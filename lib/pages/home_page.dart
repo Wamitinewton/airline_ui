@@ -1,4 +1,5 @@
-import 'package:airline_ui/utils/utils.dart';
+import 'package:airline_ui/utils/styles.dart';
+import 'package:airline_ui/widgets/ticket_view.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -109,6 +110,9 @@ class _HomePageState extends State<HomePage> {
                         ),
                       )
                     ],
+                  ),
+                  TicketView(
+                    isOrange: true,
                   )
                 ],
               ),
