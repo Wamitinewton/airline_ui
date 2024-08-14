@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const Gap(40),
-                   Row(
+                  Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -104,15 +104,21 @@ class _HomePageState extends State<HomePage> {
                         child: Text(
                           'View all',
                           style: Styles.textStyle.copyWith(
-                            color: Styles.primaryColor,
-                            fontSize: 19
-                          ),
+                              color: Styles.primaryColor, fontSize: 19),
                         ),
                       )
                     ],
                   ),
-                  TicketView(
-                    isOrange: true,
+                  const SingleChildScrollView(
+                    physics: BouncingScrollPhysics(),
+                    padding: EdgeInsets.only(left: 20),
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        TicketView(isOrange: true),
+                        TicketView(isOrange: true)
+                      ],
+                    ),
                   )
                 ],
               ),
